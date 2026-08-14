@@ -69,14 +69,11 @@ public static function eliminar(Router $router){
     isAdmin();    
     
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        
         $id = $_POST['id'];
 
+        echo "LLEGUÉ AL MÉTODO ELIMINAR";
+        echo "<br>";
         var_dump($id);
-
-        $servicio = Servicio::find($id);
-
-        var_dump($servicio);
 
         exit;
     }

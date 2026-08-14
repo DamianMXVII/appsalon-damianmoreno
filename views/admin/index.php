@@ -1,4 +1,4 @@
-<h1 class="nombre-pagina">Administracion</h1>
+<h1 class="nombre-pagina">Administracion 2</h1>
 
 
 <?php 
