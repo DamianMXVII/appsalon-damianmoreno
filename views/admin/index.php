@@ -1,4 +1,4 @@
-<h1 class="nombre-pagina">Panel de Administracion</h1>
+<h1 class="nombre-pagina">Administracion</h1>
 
 
 <?php 
