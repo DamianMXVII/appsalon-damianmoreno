@@ -1,4 +1,4 @@
-<h1 class="nombre-pagina">Administracion 2</h1>
+<h1 class="nombre-pagina">Administracion 3</h1>
 
 
 <?php 
@@ -58,10 +58,14 @@
             if(esUltimo($actual, $proximo)){ ?>
                 <p class="total">Total: <span>$  <?php echo $total; ?> </span></p>
 
-            <form action="/api/eliminar" method="post" >
+            <div>
+                ID de esta cita: <?php echo $cita->id; ?>
+            </div>
+
+            <form action="/api/eliminar" method="post">
                 <input type="hidden" name="id" value="<?php echo $cita->id; ?>">
-                <input type="submit" class="boton-eliminar" value='Eliminar'>
-            </form>  
+                <input type="submit" class="boton-eliminar" value="Eliminar">
+            </form>
                 
             <?php }
             } //Fin de FOR ?>
