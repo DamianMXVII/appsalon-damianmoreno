@@ -35,7 +35,8 @@ class APIController{
     }
 
     public static function eliminar(){
-        $cita = Cita::find('id');
+        $id = $_POST['id'];
+        $cita = Cita::find($id);
         $cita->eliminar();
         header('Location:' . $_SERVER['HTTP_REFERER']);
 

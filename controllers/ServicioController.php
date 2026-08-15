@@ -65,17 +65,16 @@ class ServicioController{
         ]);
 
     }
-public static function eliminar(Router $router){
-    isAdmin();    
-    
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        $id = $_POST['id'];
+        public static function eliminar(){
+            isAdmin();    
 
-        echo "LLEGUÉ AL MÉTODO ELIMINAR";
-        echo "<br>";
-        var_dump($id);
+            if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                $id = $_POST['id'];
+                
+                $servicio = Servicio::find($id);
+                $servicio->eliminar();
 
-        exit;
-    }
-}
+                header('Location: /servicios');
+            }
+        }
 }

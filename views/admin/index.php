@@ -5,7 +5,7 @@
 @include_once __DIR__ . '/../templates/barra.php';
 ?>
 
-<h2>Buscar Citas</h2>
+<h2>Buscar Citas 3</h2>
 
 <div class="busqueda">
     <form class="formulario" action="">
@@ -58,14 +58,16 @@
             if(esUltimo($actual, $proximo)){ ?>
                 <p class="total">Total: <span>$  <?php echo $total; ?> </span></p>
 
-            <div>
-                ID de esta cita: <?php echo $cita->id; ?>
-            </div>
-
             <form action="/api/eliminar" method="post">
-                <input type="hidden" name="id" value="<?php echo $cita->id; ?>">
+                <input type="hidden" name="id" value="<?php echo $idCita; ?>">
+
                 <input type="submit" class="boton-eliminar" value="Eliminar">
+
+                <p>
+                    ID enviado: <?php echo $idCita; ?>
+                </p>
             </form>
+            
                 
             <?php }
             } //Fin de FOR ?>
